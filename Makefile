@@ -3,14 +3,12 @@ all:
 
 build: src/lib.rs
 	rm -f dist/*
-	wasm-pack build --dev --target no-modules --out-dir dist --out-name index
-	mv dist/index_bg.wasm dist/index.wasm
+	wasm-pack build --dev --target web --out-dir dist --out-name index
 
 release: clean
-	wasm-pack build --target no-modules --out-dir www/dist --out-name index
+	wasm-pack build --target web --out-dir www/dist --out-name index
 	cp index.html www/index.html
 	cp -r static/ www/static
-	mv www/dist/index_bg.wasm www/dist/index.wasm
 	rm www/dist/*.ts www/dist/package.json
 
 release-test: release

@@ -1,13 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" content="text/html;charset=utf-8" http-equiv="Content-Type">
   <title>Tiny Rust + WASM</title>
 </head>
 <body>
-  <script src="dist/index.js"></script>
-  <script>
-    wasm_bindgen("dist/index.wasm");
+  <script type="module">
+    import init, { add } from './dist/index.js';
+    async function run() {
+      await init();
+      console.log(add(2, 1)); 
+    }
+    run();
   </script>
 </body>
 </html>
