@@ -2,12 +2,12 @@
 name = "tiny_rust_wasm"
 description = "A very small rust + wasm example. Fight waste!"
 repository = "https://github.com/misaim/tiny_rust_wasm"
-version = "0.0.1"
+version = "0.0.2"
 authors = ["Liam github.com/misaim"]
 edition = "2021"
 
 [profile.dev]
-opt-level = 3
+opt-level = 0
 
 [profile.release]
 lto = true
@@ -19,10 +19,10 @@ wasm-opt = ["-O4"]
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-wasm-bindgen = "0.2.63"
+wasm-bindgen = "0.2.87"
 
 [dependencies.web-sys]
-version = "0.3.40"
+version = "0.3.64"
 features = [
   'Document',
   'Element',

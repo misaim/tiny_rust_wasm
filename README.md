@@ -1,8 +1,6 @@
 
 # Tiny Rust + WASM
 
-  
-
 A really small rust + wasm example using webpack.
 
 Base example interacts with DOM.
@@ -11,18 +9,15 @@ Suggest reading the [wasm-bindgen](https://rustwasm.github.io/docs/wasm-bindgen/
 
 ## Just get started™
 
-`git clone` this repo then
-
-`make run`
+`git clone` this repo then `make run`
 
 Navigate to `http://[::]:8000/` or `http://127.0.0.1:8000`
 
- 
 ## Dependencies
 
-`rust` and `wasm-pack` for builds.
-
-`python3` used for `make run` and `make release-test`
+- `make` for handling builds.
+- `rust` (i.e `cargo`) and `wasm-pack` for building.
+- (optional) `python3` `simple.http` used for `make run` and `make release-test`
 
 ## Building:
 

@@ -1,5 +1,5 @@
 all:
-	echo "Building without server, -Os"
+	echo "No rule defined. Try make run."
 
 build: src/lib.rs
 	rm -f dist/*
@@ -18,4 +18,5 @@ run: build
 	python3 -m http.server
 
 clean:
+	cargo clean
 	rm -rf www/ dist/
